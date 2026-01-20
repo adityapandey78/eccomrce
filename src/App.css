@@ -1,0 +1,22 @@
+/* @import 'tailwindcss'; */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+  /* font-family: DM; */
+  background-color: #ffffff;
+}
+.button--primary{
+  height: 56px;
+  padding: 16px 48px;
+  background-color: #DB4444;
+  border-radius: 4px;
+  font-size:16px;
+  line-height: 24px;
+}
+.navbar-item--color{
+  color:'#000000'; font-size: '16px'; line-height:'24px'; font-weight:'$6'
+}
