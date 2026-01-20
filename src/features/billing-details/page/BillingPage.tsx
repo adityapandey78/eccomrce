@@ -171,7 +171,7 @@ const BillingPage = () => {
               <ButtonPrimary>Apply Coupon</ButtonPrimary>
             </Flex>
 
-            <ButtonPrimary css={{ marginTop: '12px', width: '200px' }}>
+            <ButtonPrimary css={{ marginTop: '12px', width: '200px' }} onClick={(()=>alert("Order Placed!.."))}>
               Place Order
             </ButtonPrimary>
           </Flex>
