@@ -93,6 +93,12 @@ const BillingPage = () => {
     console.log(payload)
     // alert('The order is submitted!');
     
+    toast({
+      variant: "default",
+      title: "Cart Submitted",
+      description: "The order has been placed. Please check console for results",
+    });
+    
   };
 
   return (
@@ -183,7 +189,7 @@ const BillingPage = () => {
                     id="save-info"
                     size="sm"
                     checked={field.value}
-                    onChange={field.onChange}
+                    onChange={(val) => field.onChange(val)}
                     // onError={errors.firstName?.message}
                   >
                     Save this information for faster check-out next time
@@ -304,7 +310,7 @@ const BillingPage = () => {
                 control={control}
                 defaultValue="cod"
                 render={({ field }) => (
-                  <RadioGroup value={field.value} onChange={field.onChange}>
+                  <RadioGroup value={field.value}  onChange={(val) => field.onChange(val)}>
                     <Flex alignItems="center" justifyContent="space-between">
                       <Radio value="bank">Bank</Radio>
 
@@ -361,15 +367,7 @@ const BillingPage = () => {
 
               <ButtonPrimary
                 type="submit"
-                css={{ marginTop: '12px', width: '200px' }}
-                onClick={()=>{
-                  toast({
-                    variant: "default",
-                    title: "Cart Submitted",
-                    description: "The order has been placed. Please check console for results",
-                   });
-                }}    
-                
+                css={{ marginTop: '12px', width: '200px' }} 
               >
                 Place Order
               </ButtonPrimary>
