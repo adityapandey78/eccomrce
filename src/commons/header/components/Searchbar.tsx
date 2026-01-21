@@ -34,7 +34,7 @@ const Searchbar = () => {
     })
     .slice(0, 6);
   }, [debouncedInput, products]);
-    console.log(results)
+    // console.log(results)
   return (
     <Box css={{ position: 'relative' }}>
       <Input

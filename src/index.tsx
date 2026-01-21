@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { ThemeProvider,defaultTheme} from '@sparrowengg/twigs-react';
+import { ThemeProvider,Toastr,defaultTheme} from '@sparrowengg/twigs-react';
 import { Provider } from 'react-redux';
 import store from './commons/store/store';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -21,7 +21,10 @@ if (rootEl) {
               body: "'DM sans', sans-serif",
               heading: "'DM sans', sans-serif",
             },}}>
+          <>
+          <Toastr duration={10000}/>
           <App />
+          </>
         </ThemeProvider>
         </Provider>
       </QueryClientProvider>
