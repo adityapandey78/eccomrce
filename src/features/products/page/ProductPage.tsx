@@ -21,19 +21,32 @@ const ProductPage = () => {
     // );
 
     const {data:products=[], isLoading, isError} = useQuery(getProductsQuery())
-    if (isLoading) return <Loading/>;
-    if (isError) return <Error/>;
-
+    
     const itemsPerPage=12;
 
     const start=(activePage-1)*itemsPerPage;
     const end=start+itemsPerPage;
     const paginatedProducts=products.slice(start,end)
-    // console.log(paginatedProducts)
-    
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, [paginatedProducts]);
+
+
+      
+    if (isLoading) return <Loading/>;
+    if (isError) return <Error/>;
+
+    
+    // console.log(paginatedProducts)
+    
+    console.log({
+        // slug,
+        productsLength: products.length,
+        isLoading,
+        isError,
+        // productFound: !!products.find((p) => p.id === Number(slug))
+      });
+   
     return (
         <Flex flexDirection='column'
             css={{

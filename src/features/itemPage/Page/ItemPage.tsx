@@ -33,6 +33,7 @@ const ItemPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { slug } = useParams<{ slug: string }>();
   const { products, isLoading, isError } = useProduct();
+  
 
   // Find product (may be undefined during loading)
   const product = products.find((p) => p.id === Number(slug));
@@ -62,7 +63,7 @@ const ItemPage = () => {
         padding: '40px 135px',
       }}
     >
-      <Path></Path>
+      {/* <Path></Path> */}
       <Flex justifyItems="center" alignItems="center" flexDirection="column">
         <Box
           css={{
@@ -365,7 +366,7 @@ const ItemPage = () => {
         <Grid templateColumns="repeat(4,minmax(0,1fr))">
           {products
             .filter(
-              (p) => p.category === product.category && p.id !== product.id,
+              (p) => p.category === product.category
             )
             .slice(0, 5)
             .map((p) => (
