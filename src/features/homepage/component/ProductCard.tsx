@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../commons/store/store';
 import { addToCart } from '../../cart/store/cartSlice';
+import StartRating from './StartRating';
 
 
 interface ProductCardProps{
@@ -132,7 +133,7 @@ const ProductCard:React.FC<ProductCardProps> = ({product}) => {
               }}>${product.originalPrice}</Text>
           )}
         </Box>
-        <Box>⭐️⭐️⭐️⭐️⭐️</Box>
+        <StartRating rating={product.rating}/>
       </Box>
     </Box>
   );

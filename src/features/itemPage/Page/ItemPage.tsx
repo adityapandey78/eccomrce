@@ -22,6 +22,7 @@ import Loading from '../../../commons/pages/Loading';
 import Error from '../../../commons/pages/Error';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../../commons/store/store';
+import StarRating from '../../homepage/component/StartRating';
 import {
   addToCart,
   increment,
@@ -121,7 +122,7 @@ const ItemPage = () => {
                   alignItems: 'center',
                 }}
               >
-                <Box>⭐️⭐️⭐️⭐️⭐️ (180 Reviews)</Box>
+                <StarRating rating={product.rating} />
                 <Text> | In Stock</Text>
               </Box>
               <Heading
