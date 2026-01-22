@@ -1,8 +1,8 @@
 import { Flex, Grid, Pagination } from "@sparrowengg/twigs-react";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import ErrorPage from "../../../commons/pages/error.tsx";
-import Loading from "../../../commons/pages/loading.tsx";
+import ErrorPage from "../../../commons/pages/error";
+import Loading from "../../../commons/pages/loading";
 import ProductCard from "../../homepage/component/product-card";
 import SectionHeader from "../../homepage/component/section-header";
 import { getProductsQuery } from "../../homepage/services";

@@ -1,5 +1,5 @@
 import { Box, type BoxProps, Flex, Heading } from "@sparrowengg/twigs-react";
-import Tags from "./tags.tsx";
+import Tags from "./tags";
 
 interface SectionHeaderProps extends BoxProps {
 	tag?: string;
