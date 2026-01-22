@@ -91,7 +91,7 @@ const BillingPage = () => {
 			totals: { subtotal },
 			createdAt: new Date().toISOString(),
 		};
-		console.log(payload);
+		console.log("You cart data is:",payload);
 		// alert('The order is submitted!');
 
 		toast({
