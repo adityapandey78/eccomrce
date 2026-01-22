@@ -1,12 +1,11 @@
-import fetchProducts from "../../../commons/services/fetchProducts";
-import mapApiProductToProduct from "../../../commons/services/mapApiProductToProduct";
-import { ApiProduct, Product } from "../../../commons/types/product";
-
+import fetchProducts from "../../../commons/services/fetch-products";
+import mapApiProductToProduct from "../../../commons/services/map-apiproducts-to-product";
+import type { ApiProduct, Product } from "../../../commons/types/common-types";
 
 export const getProductsQuery = () => ({
-  queryKey: ["products"],
-  queryFn: async (): Promise<Product[]> => {
-    const data: ApiProduct[] = await fetchProducts();
-    return data.map(mapApiProductToProduct);
-  },
+	queryKey: ["products"],
+	queryFn: async (): Promise<Product[]> => {
+		const data: ApiProduct[] = await fetchProducts();
+		return data.map(mapApiProductToProduct);
+	},
 });

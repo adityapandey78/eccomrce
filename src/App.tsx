@@ -1,53 +1,56 @@
-import './App.css';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import ItemPage from './features/itemPage/page/ItemPage';
-import CartPage from './features/cart/page/CartPage';
-import Error from './commons/pages/Error';
-import Navbar from './commons/header/page/Navbar';
-import { globalStyles } from './commons/styles/globalStyles';
-import Footer from './commons/footer/page/Footer';
-import BillingPage from './features/billing-details/page/BillingPage';
-import HomePage from './features/homepage/page/HomePage';
-import ProductPage from './features/products/page/ProductPage';
+import "./App.css";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Footer from "./commons/footer/footer";
+import Navbar from "./commons/header/navbar";
+import ErrorPage from "./commons/pages/error";
+import { globalStyles } from "./commons/styles/global-styles";
+import BillingPage from "./features/billing-details/page";
+import CartPage from "./features/cart/page";
+import HomePage from "./features/homepage/page";
+import ItemPage from "./features/itempage/page";
+import ProductPage from "./features/products/page";
+
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: (
-      <>
-        <Navbar />
-        <Outlet />
-        <Footer/>
-      </>),
-      errorElement:(
-        <>
-        <Navbar />
-        <Error/>
-        <Footer/>
-        </>
-      ),
-    children: [
-      {
-        index: true,
-        element: <HomePage />
-      },
-      { path: 'about', element: <Error /> },
-      { path: 'productspage', element: <ProductPage /> },
-      { path: 'products',
-        children:[
-          {index:true, element:<HomePage/>},
-          {path:':slug',element:<ItemPage/>}
-        ]
-       },
-       {path:'cart',element:<CartPage/>},
-       {path:'itemPage',element:<ItemPage/>},
-       {path:'billingPage',element:<BillingPage/>},
-    ]
-  }
+	{
+		path: "/",
+		element: (
+			<>
+				<Navbar />
+				<Outlet />
+				<Footer />
+			</>
+		),
+		errorElement: (
+			<>
+				<Navbar />
+				<ErrorPage />
+				<Footer />
+			</>
+		),
+		children: [
+			{
+				index: true,
+				element: <HomePage />,
+			},
+			{ path: "about", element: <ErrorPage /> },
+			{ path: "productspage", element: <ProductPage /> },
+			{
+				path: "products",
+				children: [
+					{ index: true, element: <HomePage /> },
+					{ path: ":slug", element: <ItemPage /> },
+				],
+			},
+			{ path: "cart", element: <CartPage /> },
+			{ path: "itemPage", element: <ItemPage /> },
+			{ path: "billingPage", element: <BillingPage /> },
+		],
+	},
 ]);
 
 const App = () => {
-  globalStyles();
-  return <RouterProvider router={router} />;
+	globalStyles();
+	return <RouterProvider router={router} />;
 };
 
 export default App;
