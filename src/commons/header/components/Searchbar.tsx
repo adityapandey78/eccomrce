@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import { getProductsQuery } from "../../../features/homepage/services/getProductQuery";
+import { getProductsQuery } from "../../../features/homepage/services";
 
 const Searchbar = () => {
 	const [input, setInput] = useState("");

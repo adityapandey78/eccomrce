@@ -5,7 +5,7 @@ import ErrorPage from "../../../commons/pages/error";
 import Loading from "../../../commons/pages/loading";
 import ProductCard from "../../homepage/component/product-card";
 import SectionHeader from "../../homepage/component/section-header";
-import { getProductsQuery } from "../../homepage/services/getProductQuery";
+import { getProductsQuery } from "../../homepage/services";
 
 const ProductPage = () => {
 	const [activePage, setActivePage] = useState(1);

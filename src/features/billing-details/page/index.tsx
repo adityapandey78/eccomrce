@@ -18,7 +18,7 @@ import * as yup from "yup";
 import ButtonPrimary from "../../../commons/components/button-primary";
 import HorizontalLine from "../../../commons/components/horizontal-line";
 import type { RootState } from "../../../commons/store/store";
-import BANKS from "../data/BANKS";
+import BANKS from "../constants/BANKS";
 import type billingFormProps from "../types";
 import type { bankEnum, checkoutPayload } from "../types";
 

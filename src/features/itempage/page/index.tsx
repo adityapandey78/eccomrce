@@ -25,7 +25,7 @@ import { addToCart } from "../../cart/store/cart-slice";
 import ProductCard from "../../homepage/component/product-card";
 import SectionHeader from "../../homepage/component/section-header";
 import StarRating from "../../homepage/component/start-rating";
-import { getProductsQuery } from "../../homepage/services/getProductQuery";
+import { getProductsQuery } from "../../homepage/services";
 
 const ItemPage = () => {
 	const dispatch = useDispatch<AppDispatch>();

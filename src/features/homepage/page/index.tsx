@@ -13,7 +13,7 @@ import ProductCard from "../component/product-card";
 import SectionHeader from "../component/section-header";
 import NewArrivals from "../component/sections/NewArrivals.section";
 import Timer from "../component/timer";
-import { getProductsQuery } from "../services/getProductQuery";
+import { getProductsQuery } from "../services";
 
 const HomePage = () => {
 	const navigate = useNavigate();
