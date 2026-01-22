@@ -82,6 +82,11 @@ const BillingPage = () => {
       type: "manual",
       message: "Your cart is empty. Please add items before checkout.",
     });
+    toast({
+      variant:'error',
+      title: "Your cart is empty.",
+      description: "Please add items to the cart before checkout",
+    });
     return;
   }
     const payload:checkoutPayload={
@@ -371,11 +376,7 @@ const BillingPage = () => {
               >
                 Place Order
               </ButtonPrimary>
-              {errors.root && (
-                <Text css={{ color: "$danger500", marginTop: "8px" }}>
-                  {errors.root.message}
-                </Text>
-              )}
+              
             </Flex>
           </Box>
         </Flex>
