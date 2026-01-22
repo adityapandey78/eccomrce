@@ -16,10 +16,10 @@ interface billingFormProps {
     streetAddress: string,
     apartment?: string,
     town: string,
-    phone: number,
+    phone: string,
     email: string,
     payment:paymentMethod,
-    saveInfo:boolean
+    saveInfo?:boolean
 
 }
 export interface checkoutPayload {
