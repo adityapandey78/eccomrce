@@ -26,7 +26,7 @@ import {
   addToCart,
   increment,
   decrement,
-} from '../../../features/cart/store/cartSlice';
+} from '../../cart/store/cartSlice';
 import { useEffect, useState } from 'react';
 
 const ItemPage = () => {

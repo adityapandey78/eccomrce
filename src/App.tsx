@@ -1,6 +1,6 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import ItemPage from './features/itemPage/Page/ItemPage';
+import ItemPage from './features/itemPage/page/ItemPage';
 import CartPage from './features/cart/page/CartPage';
 import Error from './commons/pages/Error';
 import Navbar from './commons/header/page/Navbar';
