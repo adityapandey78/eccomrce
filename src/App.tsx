@@ -1,8 +1,8 @@
 import "./App.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Footer from "./commons/footer/footer";
-import Navbar from "./commons/header/navbar";
-import ErrorPage from "./commons/pages/error";
+import Footer from "./commons/footer/footer.tsx";
+import Navbar from "./commons/header/navbar.tsx";
+import ErrorPage from "./commons/pages/error.tsx";
 import { globalStyles } from "./commons/styles/global-styles";
 import BillingPage from "./features/billing-details/page";
 import CartPage from "./features/cart/page";

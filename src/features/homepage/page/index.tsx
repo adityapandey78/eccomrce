@@ -5,14 +5,14 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import ButtonPrimary from "../../../commons/components/button-primary";
 import HorizontalLine from "../../../commons/components/horizontal-line";
-import ErrorPage from "../../../commons/pages/error";
-import Loading from "../../../commons/pages/loading";
-import ArrowButton from "../component/arrow-button";
-import Carousel from "../component/carousel";
-import ProductCard from "../component/product-card";
-import SectionHeader from "../component/section-header";
-import NewArrivals from "../component/sections/NewArrivals.section";
-import Timer from "../component/timer";
+import ErrorPage from "../../../commons/pages/error.tsx";
+import Loading from "../../../commons/pages/loading.tsx";
+import ArrowButton from "../component/arrow-button.tsx";
+import Carousel from "../component/carousel.tsx";
+import ProductCard from "../component/product-card.tsx";
+import SectionHeader from "../component/section-header.tsx";
+import NewArrivals from "../component/sections/NewArrivals.section.tsx";
+import Timer from "../component/timer.tsx";
 import { getProductsQuery } from "../services";
 
 const HomePage = () => {
