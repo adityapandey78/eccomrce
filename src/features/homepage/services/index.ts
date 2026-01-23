@@ -1,6 +1,6 @@
-import fetchProducts from "../../../commons/services/fetch-products";
-import mapApiProductToProduct from "../../../commons/services/map-apiproducts-to-product";
-import type { ApiProduct, Product } from "../../../commons/types/common-types";
+import fetchProducts from "./fetch-products";
+import mapApiProductToProduct from "../utils/map-apiproducts-to-product";
+import type { ApiProduct, Product } from "../../../commons/types";
 
 export const getProductsQuery = () => ({
 	queryKey: ["products"],

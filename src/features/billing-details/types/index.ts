@@ -1,4 +1,4 @@
-import type { CartItem as cartItem } from "../../../commons/types/common-types";
+import type { CartItem as cartItem } from "../../../commons/types";
 
 export enum bankEnum {
 	bkash = "bkash",

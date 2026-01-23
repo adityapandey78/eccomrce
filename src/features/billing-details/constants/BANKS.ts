@@ -1,13 +1,13 @@
 import { bankEnum } from "../types";
 
 const BANKS = [
-	{ key: bankEnum.bkash, src: "/Assets/bkash.png", alt: "Bkash" },
-	{ key: bankEnum.visa, src: "/Assets/visa.png", alt: "Visa" },
+	{ key: bankEnum.bkash, src: "/assets/bkash.png", alt: "Bkash" },
+	{ key: bankEnum.visa, src: "/assets/visa.png", alt: "Visa" },
 	{
 		key: bankEnum.mastercard,
-		src: "/Assets/mastercard.png",
+		src: "/assets/mastercard.png",
 		alt: "Mastercard",
 	},
-	{ key: bankEnum.nagad, src: "/Assets/nagad.png", alt: "Nagad" },
+	{ key: bankEnum.nagad, src: "/assets/nagad.png", alt: "Nagad" },
 ];
 export default BANKS;
