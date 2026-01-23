@@ -62,7 +62,6 @@ const ItemPage = () => {
 				padding: "40px 135px",
 			}}
 		>
-			{/* <Path></Path> */}
 			<Flex justifyItems="center" alignItems="center" flexDirection="column">
 				<Box
 					css={{
