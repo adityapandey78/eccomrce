@@ -1,46 +1,43 @@
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Footer, Navbar } from "../commons/components";
 import ErrorPage from "../commons/pages/error";
 
-// Import routes from each feature's page
-import { allProductsRoutes } from "../features/all-products/pages";
-import { billingRoutes } from "../features/billing-details/pages";
-import { cartRoutes } from "../features/cart/pages";
-import { homepageRoutes } from "../features/homepage/pages";
-import { productPageRoutes } from "../features/product-page/pages";
+// Import route components from each feature
+import { HomepageRoutes } from "../features/homepage/pages";
+import { AllProductsRoutes } from "../features/all-products/pages";
+import { ProductPageRoutes } from "../features/product-details/pages";
+import { CartRoutes } from "../features/cart/pages";
+import { BillingRoutes } from "../features/billing-details/pages";
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: (
-			<>
-				<Navbar />
-				<Outlet />
-				<Footer />
-			</>
-		),
-		errorElement: (
-			<>
-				<Navbar />
-				<ErrorPage />
-				<Footer />
-			</>
-		),
-		children: [
-			// Homepage routes (index route)
-			...homepageRoutes,
-			// About page
-			{ path: "about", element: <ErrorPage /> },
-			// All products page
-			...allProductsRoutes,
-			// Product detail routes
-			...productPageRoutes,
-			// Cart routes
-			...cartRoutes,
-			// Billing routes
-			...billingRoutes,
-		],
-	},
-]);
+const AppRoutes = () => {
+	return (
+		<>
+			<Navbar />
+			<Routes>
+				{/* Homepage routes */}
+				{HomepageRoutes()}
 
-export default router;
+				{/* About page */}
+				<Route path="about" element={<ErrorPage />} />
+
+				{/* All products routes */}
+				{AllProductsRoutes()}
+
+				{/* Product detail routes */}
+				{ProductPageRoutes()}
+
+				{/* Cart routes */}
+				{CartRoutes()}
+
+				{/* Billing routes */}
+				{BillingRoutes()}
+
+				{/* Catch-all for 404 */}
+				<Route path="*" element={<ErrorPage />} />
+			</Routes>
+			<Footer />
+		</>
+	);
+};
+
+export default AppRoutes;

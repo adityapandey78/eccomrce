@@ -26,10 +26,8 @@ if (rootEl) {
 							},
 						}}
 					>
-						
-							<Toastr duration={10000} />
-							<App />
-						
+						<Toastr duration={10000} />
+						<App />
 					</ThemeProvider>
 				</Provider>
 			</QueryClientProvider>

@@ -1,4 +1,11 @@
-import { Box, Button, Heading, Image, Text, toast } from "@sparrowengg/twigs-react";
+import {
+	Box,
+	Button,
+	Heading,
+	Image,
+	Text,
+	toast,
+} from "@sparrowengg/twigs-react";
 import type React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -89,13 +96,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 						zIndex: "100",
 					}}
 					className="show-add_to_cart"
-					onClick={() => {dispatch(addToCart(product))
-            toast({
-              variant: "default",
-              title: "Added to cart",
-              description: "Product has been added to your cart",
-            });
-          }}
+					onClick={() => {
+						dispatch(addToCart(product));
+						toast({
+							variant: "default",
+							title: "Added to cart",
+							description: "Product has been added to your cart",
+						});
+					}}
 				>
 					Add to Cart
 				</Button>

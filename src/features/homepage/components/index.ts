@@ -8,3 +8,5 @@ export { default as Tags } from "./tags";
 export { default as Timer } from "./timer";
 export { default as Title } from "./title";
 export { default as NewArrivals } from "./new-arrivals";
+export { default as FlashSales } from "./flash-sales";
+export { default as ExploreProducts } from "./explore-products";

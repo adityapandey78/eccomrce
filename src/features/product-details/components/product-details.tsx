@@ -21,12 +21,14 @@ import ErrorPage from "../../../commons/pages/error";
 import Loading from "../../../commons/pages/loading";
 import type { AppDispatch, RootState } from "../../../store";
 import { addToCart } from "../../cart/states/cart-slice";
-import { ProductCard, SectionHeader, StarRating } from "../../homepage/components";
+import {
+	ProductCard,
+	SectionHeader,
+	StarRating,
+} from "../../homepage/components";
 import { getProductsQuery } from "../../homepage/services";
 
-import type { RouteObject } from "react-router-dom";
-
-const ItemPage = () => {
+const ProductDetails = () => {
 	const dispatch = useDispatch<AppDispatch>();
 	const { slug } = useParams<{ slug: string }>();
 	const {
@@ -67,7 +69,7 @@ const ItemPage = () => {
 					css={{
 						display: "flex",
 						gap: "60px",
-            alignItems:'center'
+						alignItems: "center",
 					}}
 				>
 					<Box
@@ -95,7 +97,7 @@ const ItemPage = () => {
 							display: "flex",
 							flexDirection: "column",
 							justifyContent: "space-between",
-              gap:'$10'
+							gap: "$10",
 						}}
 					>
 						<Box
@@ -382,13 +384,4 @@ const ItemPage = () => {
 	);
 };
 
-export const productPageRoutes: RouteObject[] = [
-	{
-		path: "products",
-		children: [
-			{ index: true, element: <ItemPage /> },
-			{ path: ":slug", element: <ItemPage /> },
-		],
-	}
-];
-export default ItemPage;
+export default ProductDetails;

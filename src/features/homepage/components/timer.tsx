@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import timeDateToMs from "../utils/time-date-to-ms";
 
 const Timer = () => {
-	const TIMER_DATE = "26/01/2026-10:00";
+	const TIMER_DATE = "31/01/2026-10:00";
 	const targetMs = timeDateToMs(TIMER_DATE);
 
 	const [timeLeft, setTimeLeft] = useState<number>(
